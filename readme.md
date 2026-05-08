@@ -31,41 +31,66 @@ The frontend updates in real time using WebSockets whenever the dataset changes.
 ├── storage.py       # Thread-safe JSON read/write utilities
 ├── books.json       # Auto-created on first run
 └── static/
-    └── index.html   # Frontend (HTML + CSS + JS)Requirements
+    └── index.html   # Frontend (HTML + CSS + JS)
+```
 
+---
 
-Python 3.11+
-FastAPI
-Uvicorn
-Pydantic
-Installation
+## Requirements
+
+- Python 3.11+
+- FastAPI
+- Uvicorn
+- Pydantic
+
+---
+
+## Installation
 
 Install dependencies:
 
+```bash
 pip install fastapi uvicorn pydantic
-Running the Application
+```
+
+---
+
+## Running the Application
 
 Start the FastAPI server:
 
+```bash
 uvicorn main:app --reload
+```
 
 Open the app in your browser:
 
+```text
 http://localhost:8000
+```
 
 API documentation:
 
+```text
 http://localhost:8000/docs
-API Reference
-POST /books
+```
+
+---
+
+# API Reference
+
+## POST `/books`
 
 Create a new book or update an existing one.
 
 A book is considered existing if:
 
-The ISBN matches, or
-The combination of title + author + publication year matches
-Request Body
+- The ISBN matches, or
+- The combination of title + author + publication year matches
+
+### Request Body
+
+```json
 {
   "title": "Dune",
   "author": "Frank Herbert",
@@ -73,7 +98,11 @@ Request Body
   "genre": "Sci-Fi",
   "isbn": "978-0-441-17271-9"
 }
-Success Response (201 Created)
+```
+
+### Success Response (201 Created)
+
+```json
 {
   "success": true,
   "message": "Book 'Dune' created successfully.",
@@ -82,7 +111,11 @@ Success Response (201 Created)
     "title": "Dune"
   }
 }
-Success Response (200 Updated)
+```
+
+### Success Response (200 Updated)
+
+```json
 {
   "success": true,
   "message": "Book 'Dune' updated successfully.",
@@ -91,21 +124,34 @@ Success Response (200 Updated)
     "title": "Dune"
   }
 }
-GET /books
+```
+
+---
+
+## GET `/books`
 
 Retrieve books with optional filtering, sorting, and pagination.
 
-Query Parameters
-Parameter	Type	Default	Description
-genre	string	—	Exact genre match (case-insensitive)
-author	string	—	Partial author match (case-insensitive)
-sort_by	string	—	title, author, or publication_year
-sort_order	string	asc	asc or desc
-page	integer	1	Page number
-page_size	integer	10	Results per page (1–100)
-Example Request
+### Query Parameters
+
+| Parameter | Type | Default | Description |
+|---|---|---|---|
+| genre | string | — | Exact genre match (case-insensitive) |
+| author | string | — | Partial author match (case-insensitive) |
+| sort_by | string | — | `title`, `author`, or `publication_year` |
+| sort_order | string | asc | `asc` or `desc` |
+| page | integer | 1 | Page number |
+| page_size | integer | 10 | Results per page (`1–100`) |
+
+### Example Request
+
+```http
 GET /books?genre=Sci-Fi&sort_by=title&sort_order=asc&page=1&page_size=10
-Response
+```
+
+### Response
+
+```json
 {
   "total": 42,
   "page": 1,
@@ -117,11 +163,17 @@ Response
     }
   ]
 }
-DELETE /books/{book_id}
+```
+
+---
+
+## DELETE `/books/{book_id}`
 
 Delete a book using its ID.
 
-Success Response
+### Success Response
+
+```json
 {
   "success": true,
   "message": "Book 'Dune' by Frank Herbert has been deleted.",
@@ -130,33 +182,55 @@ Success Response
     "title": "Dune"
   }
 }
-Error Response
+```
+
+### Error Response
+
+```json
 {
   "detail": "Book not found"
 }
-WebSocket /ws/books
+```
+
+---
+
+## WebSocket `/ws/books`
 
 Provides real-time updates whenever the dataset changes.
 
-Behavior
-Sends the complete book list immediately after connection
-Pushes updates automatically whenever books are added, updated, or deleted
-Message Format
+### Behavior
+
+- Sends the complete book list immediately after connection
+- Pushes updates automatically whenever books are added, updated, or deleted
+
+### Message Format
+
+```json
 {
   "type": "update",
   "books": []
 }
-Validation Rules
-Field	Rules
-title	Required, non-empty
-author	Required, non-empty
-publication_year	Integer, 4 digits, range 1450 to current year
-genre	Required, non-empty
-isbn	Valid ISBN-10 or ISBN-13 (hyphens allowed)
-Validation Error Example
+```
 
-HTTP 422 Unprocessable Entity
+---
 
+# Validation Rules
+
+| Field | Rules |
+|---|---|
+| title | Required, non-empty |
+| author | Required, non-empty |
+| publication_year | Integer, 4 digits, range 1450 to current year |
+| genre | Required, non-empty |
+| isbn | Valid ISBN-10 or ISBN-13 (hyphens allowed) |
+
+---
+
+## Validation Error Example
+
+HTTP `422 Unprocessable Entity`
+
+```json
 {
   "success": false,
   "message": "Validation failed.",
@@ -164,21 +238,34 @@ HTTP 422 Unprocessable Entity
     "publication_year: Earliest supported year is 1450."
   ]
 }
-Error Reference
-Status Code	Meaning
-200	OK — book updated or deleted
-201	Created — new book added
-400	Bad Request — invalid sort_by value
-404	Book not found
-409	ISBN already used by another book
-422	Validation failed
-Tech Stack
-FastAPI
-Pydantic
-Uvicorn
-Vanilla JavaScript
-WebSockets
-JSON File Storage
-License
+```
+
+---
+
+# Error Reference
+
+| Status Code | Meaning |
+|---|---|
+| 200 | OK — book updated or deleted |
+| 201 | Created — new book added |
+| 400 | Bad Request — invalid `sort_by` value |
+| 404 | Book not found |
+| 409 | ISBN already used by another book |
+| 422 | Validation failed |
+
+---
+
+# Tech Stack
+
+- FastAPI
+- Pydantic
+- Uvicorn
+- Vanilla JavaScript
+- WebSockets
+- JSON File Storage
+
+---
+
+# License
 
 MIT License
