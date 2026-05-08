@@ -1,0 +1,835 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Bookshelf</title>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --ink: #1a1a18;
+      --paper: #f5f2eb;
+      --muted: #8a8880;
+      --rule: #d4d0c8;
+      --accent: #c84b2f;
+      --green: #2d6a4f;
+      --mono: 'DM Mono', monospace;
+      --serif: 'DM Serif Display', serif;
+    }
+
+    body {
+      background: var(--paper);
+      color: var(--ink);
+      font-family: var(--mono);
+      font-size: 13px;
+      min-height: 100vh;
+    }
+
+    header {
+      border-bottom: 2px solid var(--ink);
+      padding: 24px 40px 20px;
+      display: flex;
+      align-items: baseline;
+      gap: 20px;
+    }
+
+    header h1 {
+      font-family: var(--serif);
+      font-size: 2rem;
+      font-weight: 400;
+      letter-spacing: -0.02em;
+    }
+
+    header span {
+      color: var(--muted);
+      font-size: 11px;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+    }
+
+    .layout {
+      display: grid;
+      grid-template-columns: 340px 1fr;
+      min-height: calc(100vh - 73px);
+    }
+
+    .sidebar {
+      border-right: 1px solid var(--rule);
+      padding: 32px 28px;
+    }
+
+    .sidebar h2 {
+      font-family: var(--serif);
+      font-size: 1.1rem;
+      font-weight: 400;
+      margin-bottom: 20px;
+    }
+
+    .field {
+      margin-bottom: 14px;
+      position: relative;
+    }
+
+    .field label {
+      display: block;
+      font-size: 10px;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--muted);
+      margin-bottom: 5px;
+    }
+
+    .field input {
+      width: 100%;
+      border: 1px solid var(--rule);
+      background: transparent;
+      padding: 8px 10px;
+      font-family: var(--mono);
+      font-size: 13px;
+      color: var(--ink);
+      outline: none;
+      transition: border-color 0.2s;
+    }
+
+    .field input:focus { border-color: var(--ink); }
+    .field input.input-error { border-color: var(--accent); }
+
+    .field-err {
+      font-size: 10px;
+      color: var(--accent);
+      margin-top: 3px;
+      min-height: 14px;
+      display: block;
+    }
+
+    /* Dropdown / autocomplete */
+    .dropdown-wrap {
+      position: relative;
+    }
+
+    .dropdown-list {
+      position: absolute;
+      top: 100%;
+      left: 0;
+      right: 0;
+      background: var(--paper);
+      border: 1px solid var(--ink);
+      border-top: none;
+      z-index: 100;
+      max-height: 180px;
+      overflow-y: auto;
+      display: none;
+    }
+
+    .dropdown-list.open { display: block; }
+
+    .dropdown-item {
+      padding: 7px 10px;
+      cursor: pointer;
+      font-family: var(--mono);
+      font-size: 12px;
+      transition: background 0.1s;
+    }
+
+    .dropdown-item:hover,
+    .dropdown-item.highlighted { background: rgba(0,0,0,0.06); }
+
+    .dropdown-item.not-found {
+      color: var(--muted);
+      cursor: default;
+      font-style: italic;
+    }
+
+    .btn {
+      display: inline-block;
+      border: 1.5px solid var(--ink);
+      background: transparent;
+      padding: 8px 18px;
+      font-family: var(--mono);
+      font-size: 12px;
+      letter-spacing: 0.05em;
+      cursor: pointer;
+      transition: background 0.15s, color 0.15s;
+    }
+
+    .btn:hover { background: var(--ink); color: var(--paper); }
+
+    .btn.danger { border-color: var(--accent); color: var(--accent); }
+    .btn.danger:hover { background: var(--accent); color: white; }
+
+    #form-msg {
+      margin-top: 12px;
+      font-size: 11px;
+      min-height: 16px;
+    }
+
+    #form-msg.ok { color: var(--green); }
+    #form-msg.err { color: var(--accent); }
+
+    hr.divider {
+      border: none;
+      border-top: 1px solid var(--rule);
+      margin: 28px 0;
+    }
+
+    .filter-row {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+
+    .filter-row input,
+    .filter-row select {
+      border: 1px solid var(--rule);
+      background: transparent;
+      padding: 7px 10px;
+      font-family: var(--mono);
+      font-size: 12px;
+      color: var(--ink);
+      outline: none;
+      cursor: pointer;
+      width: 100%;
+    }
+
+    .filter-row input:focus { border-color: var(--ink); }
+
+    .main {
+      padding: 32px 40px;
+    }
+
+    .toolbar {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      margin-bottom: 24px;
+      flex-wrap: wrap;
+    }
+
+    #book-count {
+      margin-left: auto;
+      color: var(--muted);
+      font-size: 11px;
+      letter-spacing: 0.08em;
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+    }
+
+    thead tr {
+      border-bottom: 2px solid var(--ink);
+    }
+
+    th {
+      text-align: left;
+      font-size: 10px;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--muted);
+      padding: 0 12px 10px 0;
+      cursor: pointer;
+      user-select: none;
+      white-space: nowrap;
+    }
+
+    th:hover { color: var(--ink); }
+
+    th .sort-arrow { margin-left: 4px; opacity: 0.4; }
+    th.active-sort { color: var(--ink); }
+    th.active-sort .sort-arrow { opacity: 1; }
+
+    tbody tr {
+      border-bottom: 1px solid var(--rule);
+      transition: background 0.1s;
+    }
+
+    tbody tr:hover { background: rgba(0,0,0,0.025); }
+
+    td {
+      padding: 11px 12px 11px 0;
+      vertical-align: middle;
+    }
+
+    td.isbn { color: var(--muted); font-size: 11px; }
+
+    .del-btn {
+      background: none;
+      border: none;
+      cursor: pointer;
+      color: var(--muted);
+      font-size: 16px;
+      line-height: 1;
+      transition: color 0.15s;
+      padding: 0 4px;
+    }
+
+    .del-btn:hover { color: var(--accent); }
+
+    .pagination {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      margin-top: 24px;
+    }
+
+    .page-info { color: var(--muted); font-size: 11px; }
+
+    .empty-state {
+      text-align: center;
+      padding: 60px 0;
+      color: var(--muted);
+    }
+
+    .empty-state p { font-family: var(--serif); font-size: 1.4rem; font-style: italic; }
+    .empty-state small { font-size: 11px; letter-spacing: 0.08em; }
+
+    .tag {
+      display: inline-block;
+      font-size: 10px;
+      letter-spacing: 0.06em;
+      padding: 2px 7px;
+      border: 1px solid var(--rule);
+      color: var(--muted);
+    }
+
+    .toast {
+      position: fixed;
+      bottom: 28px;
+      right: 28px;
+      background: var(--ink);
+      color: var(--paper);
+      padding: 10px 18px;
+      font-family: var(--mono);
+      font-size: 12px;
+      opacity: 0;
+      transition: opacity 0.3s;
+      pointer-events: none;
+      z-index: 99;
+    }
+
+    .toast.show { opacity: 1; }
+  </style>
+</head>
+<body>
+
+<header>
+  <h1>Bookshelf</h1>
+</header>
+
+<div class="layout">
+  <aside class="sidebar">
+    <h2>Add / Update</h2>
+
+    <div class="field">
+      <label>Title</label>
+      <input id="f-title" placeholder="e.g. Dune" oninput="clearFieldErr('f-title')" />
+      <span class="field-err" id="err-title"></span>
+    </div>
+
+    <div class="field">
+      <label>Author</label>
+      <input id="f-author" placeholder="e.g. Frank Herbert"
+             oninput="validateAuthorInput(this); clearFieldErr('f-author')"
+             onkeydown="handleAuthorKeydown(event)" autocomplete="off" />
+      <span class="field-err" id="err-author"></span>
+    </div>
+
+    <div class="field">
+      <label>Publication Year</label>
+      <input id="f-year" type="text" placeholder="e.g. 1965" maxlength="4"
+       oninput="validateYearInput(this); clearFieldErr('f-year')" />
+      <span class="field-err" id="err-year"></span>
+    </div>
+
+    <!-- Genre dropdown for Add/Update -->
+    <div class="field">
+      <label>Genre</label>
+      <div class="dropdown-wrap">
+        <input id="f-genre" placeholder="e.g. Sci-Fi" autocomplete="off"
+               oninput="onFormGenreInput()" onkeydown="handleFormGenreKeydown(event)"
+               onfocus="onFormGenreInput()" />
+        <div class="dropdown-list" id="form-genre-list"></div>
+      </div>
+      <span class="field-err" id="err-genre"></span>
+    </div>
+
+    <div class="field">
+      <label>ISBN</label>
+      <input id="f-isbn" placeholder="e.g. 978-0-441-17271-9"
+       oninput="validateIsbnInput(this)" />
+      <span class="field-err" id="err-isbn"></span>
+    </div>
+
+    <button class="btn" onclick="submitBook()">Save Book</button>
+    <div id="form-msg"></div>
+
+    <hr class="divider" />
+
+    <h2>Filters</h2>
+    <div class="filter-row">
+
+      <!-- Genre filter with dropdown -->
+      <div class="dropdown-wrap" style="position:relative;">
+        <input id="fi-genre" placeholder="Filter by genre…" autocomplete="off"
+               oninput="onFilterGenreInput()" onkeydown="handleFilterGenreKeydown(event)"
+               onfocus="onFilterGenreInput()" />
+        <div class="dropdown-list" id="filter-genre-list"></div>
+      </div>
+
+      <!-- Author filter with autocomplete -->
+      <div class="dropdown-wrap" style="position:relative;">
+        <input id="fi-author" placeholder="Filter by author…" autocomplete="off"
+               oninput="onFilterAuthorInput()" onkeydown="handleFilterAuthorKeydown(event)" />
+        <div class="dropdown-list" id="filter-author-list"></div>
+      </div>
+
+      <select id="fi-page-size" onchange="state.pageSize=+this.value;state.page=1;fetchBooks()">
+        <option value="10">10 per page</option>
+        <option value="25">25 per page</option>
+        <option value="50">50 per page</option>
+      </select>
+      <button class="btn" onclick="applyFilters()">Apply</button>
+    </div>
+  </aside>
+
+  <main class="main">
+    <div class="toolbar">
+      <span id="book-count"></span>
+    </div>
+
+    <table id="book-table">
+      <thead>
+        <tr>
+          <th onclick="setSort('title')">Title <span class="sort-arrow">↕</span></th>
+          <th onclick="setSort('author')">Author <span class="sort-arrow">↕</span></th>
+          <th onclick="setSort('publication_year')">Year <span class="sort-arrow">↕</span></th>
+          <th>Genre</th>
+          <th>ISBN</th>
+          <th></th>
+        </tr>
+      </thead>
+      <tbody id="book-tbody"></tbody>
+    </table>
+
+    <div id="empty-state" class="empty-state" style="display:none">
+      <p>No books found.</p>
+      <small>Try adjusting filters</small>
+    </div>
+
+    <div class="pagination">
+      <button class="btn" onclick="prevPage()">← Prev</button>
+      <span class="page-info" id="page-info"></span>
+      <button class="btn" onclick="nextPage()">Next →</button>
+    </div>
+  </main>
+</div>
+
+<div class="toast" id="toast"></div>
+
+<script>
+  const state = {
+    page: 1, pageSize: 10, sortBy: null, sortOrder: 'asc',
+    genre: '', author: '', total: 0,
+    allBooks: []      // cached for autocomplete
+  };
+
+  function showToast(msg) {
+    const t = document.getElementById('toast');
+    t.textContent = msg;
+    t.classList.add('show');
+    setTimeout(() => t.classList.remove('show'), 2200);
+  }
+
+  function esc(str) {
+    return String(str).replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;');
+  }
+
+  function closeAllDropdowns() {
+    document.querySelectorAll('.dropdown-list').forEach(d => d.classList.remove('open'));
+  }
+
+  document.addEventListener('click', e => {
+    if (!e.target.closest('.dropdown-wrap')) closeAllDropdowns();
+  });
+
+  function validateAuthorInput(input) {
+    // Remove any digit characters as user types
+    const cleaned = input.value.replace(/[0-9]/g, '');
+    if (cleaned !== input.value) {
+      input.value = cleaned;
+      showFieldErr('f-author', 'Author name cannot contain numbers.');
+    }
+  }
+
+  function validateYearInput(input) {
+  // Strip non-digits
+  let cleaned = input.value.replace(/[^0-9]/g, '');
+  // Enforce max 4 digits
+  if (cleaned.length > 4) cleaned = cleaned.slice(0, 4);
+  if (cleaned !== input.value) {
+    input.value = cleaned;
+    if (input.value.length && /[^0-9]/.test(input.value))
+      showFieldErr('f-year', 'Year must contain digits only.');
+  }
+}
+
+  function validateIsbnInput(input) {
+  // Allow digits, hyphens, and trailing X (for ISBN-10 check digit)
+  const cleaned = input.value.replace(/[^0-9\-xX]/g, '');
+  if (cleaned !== input.value) {
+    input.value = cleaned;
+    showFieldErr('f-isbn', 'ISBN may only contain digits, hyphens, or X.');
+  } else {
+    clearFieldErr('f-isbn');
+  }
+}
+  function showFieldErr(inputId, msg) {
+    const errId = 'err-' + inputId.replace('f-', '');
+    const el = document.getElementById(errId);
+    if (el) el.textContent = msg;
+    const inp = document.getElementById(inputId);
+    if (inp) inp.classList.add('input-error');
+  }
+
+  function clearFieldErr(inputId) {
+    const errId = 'err-' + inputId.replace('f-', '');
+    const el = document.getElementById(errId);
+    if (el) el.textContent = '';
+    const inp = document.getElementById(inputId);
+    if (inp) inp.classList.remove('input-error');
+  }
+
+  /* ── Genre  ──────────────────────────────────────────── */
+
+  // Collect unique genres from cached books
+  function getUniqueGenres() {
+    const set = new Set(state.allBooks.map(b => b.genre).filter(Boolean));
+    return [...set].sort();
+  }
+
+  /* ── Form Genre Dropdown ──────────────────────────────────── */
+
+  let formGenreHighlight = -1;
+
+  function onFormGenreInput() {
+    clearFieldErr('f-genre');
+    const q = document.getElementById('f-genre').value.trim().toLowerCase();
+    const genres = getUniqueGenres();
+    const matches = q ? genres.filter(g => g.toLowerCase().startsWith(q)) : genres;
+    renderDropdown('form-genre-list', matches, 'genre not found', val => {
+      document.getElementById('f-genre').value = val;
+      closeAllDropdowns();
+      clearFieldErr('f-genre');
+    });
+    formGenreHighlight = -1;
+  }
+
+  function handleFormGenreKeydown(e) {
+    navigateDropdown(e, 'form-genre-list', 'f-genre', val => {
+      document.getElementById('f-genre').value = val;
+      closeAllDropdowns();
+    });
+  }
+
+  /* ── Filter Genre Dropdown ────────────────────────────────── */
+
+  let filterGenreHighlight = -1;
+
+  function onFilterGenreInput() {
+    const q = document.getElementById('fi-genre').value.trim().toLowerCase();
+    const genres = getUniqueGenres();
+    const matches = q ? genres.filter(g => g.toLowerCase().startsWith(q)) : genres;
+    renderDropdown('filter-genre-list', matches, 'genre not found', val => {
+      document.getElementById('fi-genre').value = val;
+      closeAllDropdowns();
+    });
+    filterGenreHighlight = -1;
+  }
+
+  function handleFilterGenreKeydown(e) {
+    navigateDropdown(e, 'filter-genre-list', 'fi-genre', val => {
+      document.getElementById('fi-genre').value = val;
+      closeAllDropdowns();
+    });
+    if (e.key === 'Enter') applyFilters();
+  }
+
+  /* ── Filter Author Autocomplete ───────────────────────────── */
+
+  let filterAuthorHighlight = -1;
+
+  function getUniqueAuthors() {
+    const set = new Set(state.allBooks.map(b => b.author).filter(Boolean));
+    return [...set].sort();
+  }
+
+  function onFilterAuthorInput() {
+    const q = document.getElementById('fi-author').value.trim().toLowerCase();
+    if (!q) { closeAllDropdowns(); return; }
+    const authors = getUniqueAuthors();
+    // Sort: starts-with first, then contains
+    const startsWith = authors.filter(a => a.toLowerCase().startsWith(q));
+    const contains = authors.filter(a => !a.toLowerCase().startsWith(q) && a.toLowerCase().includes(q));
+    const matches = [...startsWith, ...contains].slice(0, 10);
+    renderDropdown('filter-author-list', matches, 'author not found', val => {
+      document.getElementById('fi-author').value = val;
+      closeAllDropdowns();
+    });
+    filterAuthorHighlight = -1;
+  }
+
+  function handleFilterAuthorKeydown(e) {
+    navigateDropdown(e, 'filter-author-list', 'fi-author', val => {
+      document.getElementById('fi-author').value = val;
+      closeAllDropdowns();
+    });
+    if (e.key === 'Enter') applyFilters();
+  }
+
+  /* ── Dropdown renderer ────────────────────────────────────── */
+
+  function renderDropdown(listId, items, notFoundMsg, onSelect) {
+    const list = document.getElementById(listId);
+    list.innerHTML = '';
+    if (!items.length) {
+      const div = document.createElement('div');
+      div.className = 'dropdown-item not-found';
+      div.textContent = notFoundMsg;
+      list.appendChild(div);
+    } else {
+      items.forEach(item => {
+        const div = document.createElement('div');
+        div.className = 'dropdown-item';
+        div.textContent = item;
+        div.addEventListener('mousedown', e => { e.preventDefault(); onSelect(item); });
+        list.appendChild(div);
+      });
+    }
+    list.classList.add('open');
+  }
+
+  function navigateDropdown(e, listId, inputId, onSelect) {
+    const list = document.getElementById(listId);
+    const items = [...list.querySelectorAll('.dropdown-item:not(.not-found)')];
+    if (!items.length) return;
+
+    let hi = parseInt(list.dataset.hi ?? '-1', 10);
+
+    if (e.key === 'ArrowDown') {
+      e.preventDefault();
+      hi = Math.min(hi + 1, items.length - 1);
+    } else if (e.key === 'ArrowUp') {
+      e.preventDefault();
+      hi = Math.max(hi - 1, 0);
+    } else if (e.key === 'Enter' && hi >= 0) {
+      e.preventDefault();
+      onSelect(items[hi].textContent);
+      list.dataset.hi = -1;
+      return;
+    } else if (e.key === 'Escape') {
+      closeAllDropdowns();
+      return;
+    } else { return; }
+
+    items.forEach((it, i) => it.classList.toggle('highlighted', i === hi));
+    list.dataset.hi = hi;
+    if (items[hi]) items[hi].scrollIntoView({ block: 'nearest' });
+  }
+
+  /* ── Form author – also validate while typing ──────────────── */
+
+  function handleAuthorKeydown(e) {
+    // no dropdown for form author field, just validation
+  }
+
+  /* ── Sorting ──────────────────────────────────────────────── */
+
+  function setSort(col) {
+    if (state.sortBy === col) {
+      state.sortOrder = state.sortOrder === 'asc' ? 'desc' : 'asc';
+    } else {
+      state.sortBy = col;
+      state.sortOrder = 'asc';
+    }
+    document.querySelectorAll('th').forEach(th => th.classList.remove('active-sort'));
+    const cols = ['title', 'author', 'publication_year'];
+    const idx = cols.indexOf(col);
+    if (idx >= 0) {
+      const ths = document.querySelectorAll('th');
+      ths[idx].classList.add('active-sort');
+      ths[idx].querySelector('.sort-arrow').textContent = state.sortOrder === 'asc' ? '↑' : '↓';
+    }
+    fetchBooks();
+  }
+
+  /* ── Filters ──────────────────────────────────────────────── */
+
+  function applyFilters() {
+    state.genre = document.getElementById('fi-genre').value.trim();
+    state.author = document.getElementById('fi-author').value.trim();
+    state.page = 1;
+    closeAllDropdowns();
+    fetchBooks();
+  }
+
+  /* ── Fetch & Render ───────────────────────────────────────── */
+
+  async function fetchAllForCache() {
+    try {
+      const res = await fetch('/books?page=1&page_size=9999');
+      const data = await res.json();
+      state.allBooks = data.books || [];
+    } catch (_) {}
+  }
+
+  async function fetchBooks() {
+    const params = new URLSearchParams({ page: state.page, page_size: state.pageSize });
+    if (state.sortBy) { params.set('sort_by', state.sortBy); params.set('sort_order', state.sortOrder); }
+    if (state.genre) params.set('genre', state.genre);
+    if (state.author) params.set('author', state.author);
+
+    const res = await fetch('/books?' + params);
+    const data = await res.json();
+    state.total = data.total;
+    renderBooks(data.books);
+    document.getElementById('page-info').textContent = `Page ${data.page} · ${data.total} total`;
+    document.getElementById('book-count').textContent = `${data.total} book${data.total !== 1 ? 's' : ''}`;
+  }
+
+  function renderBooks(books) {
+    const tbody = document.getElementById('book-tbody');
+    const empty = document.getElementById('empty-state');
+    tbody.innerHTML = '';
+    if (!books.length) { empty.style.display = ''; return; }
+    empty.style.display = 'none';
+    books.forEach(b => {
+      const tr = document.createElement('tr');
+      tr.innerHTML = `
+        <td>${esc(b.title)}</td>
+        <td>${esc(b.author)}</td>
+        <td>${b.publication_year}</td>
+        <td><span class="tag">${esc(b.genre)}</span></td>
+        <td class="isbn">${esc(b.isbn)}</td>
+        <td><button class="del-btn" onclick="deleteBook(${b.id})" title="Delete">×</button></td>
+      `;
+      tbody.appendChild(tr);
+    });
+  }
+
+  async function submitBook() {
+    const msg = document.getElementById('form-msg');
+    let valid = true;
+
+    const title = document.getElementById('f-title').value.trim();
+    const author = document.getElementById('f-author').value.trim();
+    const yearRaw = document.getElementById('f-year').value.trim();
+    const genre = document.getElementById('f-genre').value.trim();
+    const isbn = document.getElementById('f-isbn').value.trim();
+
+    // Clear previous errors
+    ['f-title','f-author','f-year','f-genre','f-isbn'].forEach(id => clearFieldErr(id));
+    msg.className = ''; msg.textContent = '';
+
+    if (!title) { showFieldErr('f-title', 'Title is required.'); valid = false; }
+    if (!author) { showFieldErr('f-author', 'Author is required.'); valid = false; }
+
+    // Author: no numbers
+    if (author && /[0-9]/.test(author)) {
+      showFieldErr('f-author', 'Author name cannot contain numbers.'); valid = false;
+    }
+
+    // Year: only digits
+    if (!yearRaw) {
+      showFieldErr('f-year', 'Year is required.'); valid = false;
+    } else if (/[^0-9]/.test(yearRaw)) {
+      showFieldErr('f-year', 'Year must contain digits only.'); valid = false;
+    }
+
+    const year = parseInt(yearRaw, 10);
+    const currentYear = new Date().getFullYear();
+    if (yearRaw && !/[^0-9]/.test(yearRaw)) {
+      if (year < 1450) {
+        showFieldErr('f-year', `Year must be 1450 or later.`); valid = false;
+      } else if (year > currentYear) {
+        showFieldErr('f-year', `Year cannot be in the future.`); valid = false;
+      }
+    }
+
+    if (!genre) { showFieldErr('f-genre', 'Genre is required.'); valid = false; }
+    if (!isbn) { showFieldErr('f-isbn', 'ISBN is required.'); valid = false; }
+    if (isbn) {
+      const digits = isbn.replace(/[-\s]/g, '');
+      const isIsbn10 = /^\d{9}[\dXx]$/.test(digits);
+      const isIsbn13 = /^\d{13}$/.test(digits);
+  if (!isIsbn10 && !isIsbn13) {
+    showFieldErr('f-isbn', 'Enter a valid ISBN-10 (10 chars) or ISBN-13 (13 digits).');
+    valid = false;
+  }
+}
+
+
+    if (!valid) return;
+
+    const payload = { title, author, publication_year: year, genre, isbn };
+
+    const res = await fetch('/books', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify(payload)
+    });
+    const data = await res.json();
+    if (res.ok) {
+      const bookTitle = data.book ? data.book.title : (data.title || title);
+      msg.className = 'ok';
+      msg.textContent = res.status === 201 ? `Created: ${bookTitle}` : `Updated: ${bookTitle}`;
+      ['f-title','f-author','f-year','f-genre','f-isbn'].forEach(id => document.getElementById(id).value = '');
+      await fetchAllForCache();
+      fetchBooks();
+    } else {
+      msg.className = 'err';
+      msg.textContent = data.detail || data.message || 'Error saving book.';
+    }
+  }
+
+
+  async function deleteBook(id) {
+    if (!confirm('Delete this book?')) return;
+    const res = await fetch('/books/' + id, { method: 'DELETE' });
+    const data = await res.json();
+    if (res.ok) {
+      const bookTitle = data.deleted_book ? data.deleted_book.title : (data.title || 'Book');
+      showToast(`Deleted: ${bookTitle}`);
+      await fetchAllForCache();
+      fetchBooks();
+    } else showToast(data.detail || 'Delete failed.');
+  }
+
+  function prevPage() { if (state.page > 1) { state.page--; fetchBooks(); } }
+  function nextPage() { if (state.page * state.pageSize < state.total) { state.page++; fetchBooks(); } }
+
+
+  function connectWS() {
+    const proto = location.protocol === 'https:' ? 'wss' : 'ws';
+    const ws = new WebSocket(`${proto}://${location.host}/ws/books`);
+    ws.onerror = () => ws.close();
+    ws.onmessage = async e => {
+      const msg = JSON.parse(e.data);
+      if (msg.type === 'update') {
+        state.allBooks = msg.books || [];
+        fetchBooks();
+      }
+    };
+  }
+
+
+  (async () => {
+    await fetchAllForCache();
+    fetchBooks();
+    connectWS();
+  })();
+</script>
+</body>
+</html>
