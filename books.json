@@ -1,0 +1,1762 @@
+[
+  {
+    "id": 1,
+    "title": "1984",
+    "author": "George Orwell",
+    "publication_year": 1949,
+    "genre": "Dystopian",
+    "isbn": "9780451524935"
+  },
+  {
+    "id": 2,
+    "title": "To Kill a Mockingbird",
+    "author": "Harper Lee",
+    "publication_year": 1960,
+    "genre": "Fiction",
+    "isbn": "9780061120084"
+  },
+  {
+    "id": 3,
+    "title": "The Great Gatsby",
+    "author": "F. Scott Fitzgerald",
+    "publication_year": 1925,
+    "genre": "Novel",
+    "isbn": "9780743273565"
+  },
+  {
+    "id": 4,
+    "title": "Pride and Prejudice",
+    "author": "Jane Austen",
+    "publication_year": 1813,
+    "genre": "Romance",
+    "isbn": "9780141439518"
+  },
+  {
+    "id": 5,
+    "title": "The Catcher in the Rye",
+    "author": "J.D. Salinger",
+    "publication_year": 1951,
+    "genre": "Fiction",
+    "isbn": "9780316769488"
+  },
+  {
+    "id": 6,
+    "title": "Brave New World",
+    "author": "Aldous Huxley",
+    "publication_year": 1932,
+    "genre": "Dystopian",
+    "isbn": "9780060935467"
+  },
+  {
+    "id": 7,
+    "title": "The Hobbit",
+    "author": "J.R.R. Tolkien",
+    "publication_year": 1937,
+    "genre": "Fantasy",
+    "isbn": "9780618260300"
+  },
+  {
+    "id": 8,
+    "title": "Moby Dick",
+    "author": "Herman Melville",
+    "publication_year": 1851,
+    "genre": "Adventure",
+    "isbn": "9780140422689"
+  },
+  {
+    "id": 9,
+    "title": "War and Peace",
+    "author": "Leo Tolstoy",
+    "publication_year": 1869,
+    "genre": "Historical Fiction",
+    "isbn": "9780140449136"
+  },
+  {
+    "id": 10,
+    "title": "The Brothers Karamazov",
+    "author": "Fyodor Dostoevsky",
+    "publication_year": 1880,
+    "genre": "Philosophical Novel",
+    "isbn": "9780140449138"
+  },
+  {
+    "id": 11,
+    "title": "The Lord of the Rings",
+    "author": "J.R.R. Tolkien",
+    "publication_year": 1954,
+    "genre": "Fantasy",
+    "isbn": "9780618260301"
+  },
+  {
+    "id": 12,
+    "title": "Don Quixote",
+    "author": "Miguel de Cervantes",
+    "publication_year": 1605,
+    "genre": "Fiction",
+    "isbn": "9780140449140"
+  },
+  {
+    "id": 13,
+    "title": "One Hundred Years of Solitude",
+    "author": "Gabriel Garcia Marquez",
+    "publication_year": 1967,
+    "genre": "Magical Realism",
+    "isbn": "9780060883287"
+  },
+  {
+    "id": 14,
+    "title": "Crime and Punishment",
+    "author": "Fyodor Dostoevsky",
+    "publication_year": 1866,
+    "genre": "Psychological Fiction",
+    "isbn": "9780140449608"
+  },
+  {
+    "id": 15,
+    "title": "The Alchemist",
+    "author": "Paulo Coelho",
+    "publication_year": 1988,
+    "genre": "Fiction",
+    "isbn": "9780062315007"
+  },
+  {
+    "id": 16,
+    "title": "Harry Potter and the Philosopher's Stone",
+    "author": "J.K. Rowling",
+    "publication_year": 1997,
+    "genre": "Fantasy",
+    "isbn": "9780747532699"
+  },
+  {
+    "id": 17,
+    "title": "The Hitchhiker's Guide to the Galaxy",
+    "author": "Douglas Adams",
+    "publication_year": 1979,
+    "genre": "Sci-Fi Comedy",
+    "isbn": "9780345391803"
+  },
+  {
+    "id": 18,
+    "title": "Dune",
+    "author": "Frank Herbert",
+    "publication_year": 1965,
+    "genre": "Sci-Fi",
+    "isbn": "9780441013593"
+  },
+  {
+    "id": 19,
+    "title": "The Name of the Wind",
+    "author": "Patrick Rothfuss",
+    "publication_year": 2007,
+    "genre": "Fantasy",
+    "isbn": "9780756404079"
+  },
+  {
+    "id": 20,
+    "title": "Sapiens",
+    "author": "Yuval Noah Harari",
+    "publication_year": 2011,
+    "genre": "Non-Fiction",
+    "isbn": "9780062316097"
+  },
+  {
+    "id": 21,
+    "title": "Atomic Habits",
+    "author": "James Clear",
+    "publication_year": 2018,
+    "genre": "Self-Help",
+    "isbn": "9780735211292"
+  },
+  {
+    "id": 22,
+    "title": "Thinking Fast and Slow",
+    "author": "Daniel Kahneman",
+    "publication_year": 2011,
+    "genre": "Psychology",
+    "isbn": "9780374533557"
+  },
+  {
+    "id": 23,
+    "title": "The Lean Startup",
+    "author": "Eric Ries",
+    "publication_year": 2011,
+    "genre": "Business",
+    "isbn": "9780307887894"
+  },
+  {
+    "id": 24,
+    "title": "Maus",
+    "author": "Art Spiegelman",
+    "publication_year": 1986,
+    "genre": "Graphic Novel",
+    "isbn": "9780394747232"
+  },
+  {
+    "id": 25,
+    "title": "Watchmen",
+    "author": "Alan Moore",
+    "publication_year": 1987,
+    "genre": "Comic",
+    "isbn": "9780930289232"
+  },
+  {
+    "id": 26,
+    "title": "Batman: The Dark Knight Returns",
+    "author": "Frank Miller",
+    "publication_year": 1986,
+    "genre": "Comic",
+    "isbn": "9781563893421"
+  },
+  {
+    "id": 27,
+    "title": "Naruto Vol. 1",
+    "author": "Masashi Kishimoto",
+    "publication_year": 1999,
+    "genre": "Manga",
+    "isbn": "9781569319000"
+  },
+  {
+    "id": 28,
+    "title": "Attack on Titan Vol. 1",
+    "author": "Hajime Isayama",
+    "publication_year": 2009,
+    "genre": "Manga",
+    "isbn": "9781612620244"
+  },
+  {
+    "id": 29,
+    "title": "One Piece Vol. 1",
+    "author": "Eiichiro Oda",
+    "publication_year": 1997,
+    "genre": "Manga",
+    "isbn": "9781569319017"
+  },
+  {
+    "id": 30,
+    "title": "Death Note Vol. 1",
+    "author": "Tsugumi Ohba",
+    "publication_year": 2003,
+    "genre": "Manga",
+    "isbn": "9781421501680"
+  },
+  {
+    "id": 31,
+    "title": "Fullmetal Alchemist Vol. 1",
+    "author": "Hiromu Arakawa",
+    "publication_year": 2001,
+    "genre": "Manga",
+    "isbn": "9781591169208"
+  },
+  {
+    "id": 32,
+    "title": "V for Vendetta",
+    "author": "Alan Moore",
+    "publication_year": 1988,
+    "genre": "Comic",
+    "isbn": "9781401208417"
+  },
+  {
+    "id": 33,
+    "title": "Persepolis",
+    "author": "Marjane Satrapi",
+    "publication_year": 2000,
+    "genre": "Graphic Novel",
+    "isbn": "9780375714573"
+  },
+  {
+    "id": 34,
+    "title": "The Sandman Vol. 1",
+    "author": "Neil Gaiman",
+    "publication_year": 1989,
+    "genre": "Comic",
+    "isbn": "9781401284770"
+  },
+  {
+    "id": 35,
+    "title": "Dragon Ball Vol. 1",
+    "author": "Akira Toriyama",
+    "publication_year": 1984,
+    "genre": "Manga",
+    "isbn": "9781569319032"
+  },
+  {
+    "id": 36,
+    "title": "Demon Slayer Vol. 1",
+    "author": "Koyoharu Gotouge",
+    "publication_year": 2016,
+    "genre": "Manga",
+    "isbn": "9781974700523"
+  },
+  {
+    "id": 37,
+    "title": "My Hero Academia Vol. 1",
+    "author": "Kohei Horikoshi",
+    "publication_year": 2014,
+    "genre": "Manga",
+    "isbn": "9781421582689"
+  },
+  {
+    "id": 38,
+    "title": "Bleach Vol. 1",
+    "author": "Tite Kubo",
+    "publication_year": 2001,
+    "genre": "Manga",
+    "isbn": "9781591169232"
+  },
+  {
+    "id": 39,
+    "title": "Vinland Saga Vol. 1",
+    "author": "Makoto Yukimura",
+    "publication_year": 2005,
+    "genre": "Manga",
+    "isbn": "9781632362452"
+  },
+  {
+    "id": 40,
+    "title": "Berserk Vol. 1",
+    "author": "Kentaro Miura",
+    "publication_year": 1989,
+    "genre": "Manga",
+    "isbn": "9781593070205"
+  },
+  {
+    "id": 41,
+    "title": "Chainsaw Man Vol. 1",
+    "author": "Tatsuki Fujimoto",
+    "publication_year": 2018,
+    "genre": "Manga",
+    "isbn": "9781974709459"
+  },
+  {
+    "id": 42,
+    "title": "Jujutsu Kaisen Vol. 1",
+    "author": "Gege Akutami",
+    "publication_year": 2018,
+    "genre": "Manga",
+    "isbn": "9781974708635"
+  },
+  {
+    "id": 43,
+    "title": "Tokyo Ghoul Vol. 1",
+    "author": "Sui Ishida",
+    "publication_year": 2011,
+    "genre": "Manga",
+    "isbn": "9781421580364"
+  },
+  {
+    "id": 44,
+    "title": "Slam Dunk Vol. 1",
+    "author": "Takehiko Inoue",
+    "publication_year": 1990,
+    "genre": "Manga",
+    "isbn": "9781591161516"
+  },
+  {
+    "id": 45,
+    "title": "Vagabond Vol. 1",
+    "author": "Takehiko Inoue",
+    "publication_year": 1998,
+    "genre": "Manga",
+    "isbn": "9781591161493"
+  },
+  {
+    "id": 46,
+    "title": "Spider-Man: Blue",
+    "author": "Jeph Loeb",
+    "publication_year": 2002,
+    "genre": "Comic",
+    "isbn": "9780785110576"
+  },
+  {
+    "id": 47,
+    "title": "X-Men: Days of Future Past",
+    "author": "Chris Claremont",
+    "publication_year": 1981,
+    "genre": "Comic",
+    "isbn": "9780785163782"
+  },
+  {
+    "id": 48,
+    "title": "Superman: Red Son",
+    "author": "Mark Millar",
+    "publication_year": 2003,
+    "genre": "Comic",
+    "isbn": "9781401201913"
+  },
+  {
+    "id": 49,
+    "title": "Saga Vol. 1",
+    "author": "Brian K. Vaughan",
+    "publication_year": 2012,
+    "genre": "Comic",
+    "isbn": "9781607066019"
+  },
+  {
+    "id": 50,
+    "title": "Bone Vol. 1",
+    "author": "Jeff Smith",
+    "publication_year": 1991,
+    "genre": "Graphic Novel",
+    "isbn": "9780439706407"
+  },
+  {
+    "id": 51,
+    "title": "Fahrenheit 451",
+    "author": "Ray Bradbury",
+    "publication_year": 1953,
+    "genre": "Dystopian",
+    "isbn": "9781451673319"
+  },
+  {
+    "id": 52,
+    "title": "The Road",
+    "author": "Cormac McCarthy",
+    "publication_year": 2006,
+    "genre": "Post-Apocalyptic",
+    "isbn": "9780307387899"
+  },
+  {
+    "id": 53,
+    "title": "No Country for Old Men",
+    "author": "Cormac McCarthy",
+    "publication_year": 2005,
+    "genre": "Thriller",
+    "isbn": "9780307387135"
+  },
+  {
+    "id": 54,
+    "title": "Blood Meridian",
+    "author": "Cormac McCarthy",
+    "publication_year": 1985,
+    "genre": "Western",
+    "isbn": "9780679728757"
+  },
+  {
+    "id": 55,
+    "title": "Slaughterhouse-Five",
+    "author": "Kurt Vonnegut",
+    "publication_year": 1969,
+    "genre": "Sci-Fi",
+    "isbn": "9780385333849"
+  },
+  {
+    "id": 56,
+    "title": "Cat's Cradle",
+    "author": "Kurt Vonnegut",
+    "publication_year": 1963,
+    "genre": "Sci-Fi Comedy",
+    "isbn": "9780385333481"
+  },
+  {
+    "id": 57,
+    "title": "A Farewell to Arms",
+    "author": "Ernest Hemingway",
+    "publication_year": 1929,
+    "genre": "War Fiction",
+    "isbn": "9780684801469"
+  },
+  {
+    "id": 58,
+    "title": "The Old Man and the Sea",
+    "author": "Ernest Hemingway",
+    "publication_year": 1952,
+    "genre": "Fiction",
+    "isbn": "9780684801223"
+  },
+  {
+    "id": 59,
+    "title": "For Whom the Bell Tolls",
+    "author": "Ernest Hemingway",
+    "publication_year": 1940,
+    "genre": "War Fiction",
+    "isbn": "9780684803357"
+  },
+  {
+    "id": 60,
+    "title": "Of Mice and Men",
+    "author": "John Steinbeck",
+    "publication_year": 1937,
+    "genre": "Fiction",
+    "isbn": "9780140177398"
+  },
+  {
+    "id": 61,
+    "title": "The Grapes of Wrath",
+    "author": "John Steinbeck",
+    "publication_year": 1939,
+    "genre": "Historical Fiction",
+    "isbn": "9780143039433"
+  },
+  {
+    "id": 62,
+    "title": "East of Eden",
+    "author": "John Steinbeck",
+    "publication_year": 1952,
+    "genre": "Fiction",
+    "isbn": "9780142004234"
+  },
+  {
+    "id": 63,
+    "title": "Anna Karenina",
+    "author": "Leo Tolstoy",
+    "publication_year": 1878,
+    "genre": "Romance",
+    "isbn": "9780143035008"
+  },
+  {
+    "id": 64,
+    "title": "The Idiot",
+    "author": "Fyodor Dostoevsky",
+    "publication_year": 1869,
+    "genre": "Philosophical Novel",
+    "isbn": "9780140447927"
+  },
+  {
+    "id": 65,
+    "title": "Notes from Underground",
+    "author": "Fyodor Dostoevsky",
+    "publication_year": 1864,
+    "genre": "Philosophical Novel",
+    "isbn": "9780679734529"
+  },
+  {
+    "id": 66,
+    "title": "Frankenstein",
+    "author": "Mary Shelley",
+    "publication_year": 1818,
+    "genre": "Gothic Horror",
+    "isbn": "9780141439471"
+  },
+  {
+    "id": 67,
+    "title": "Dracula",
+    "author": "Bram Stoker",
+    "publication_year": 1897,
+    "genre": "Gothic Horror",
+    "isbn": "9780141439846"
+  },
+  {
+    "id": 68,
+    "title": "The Picture of Dorian Gray",
+    "author": "Oscar Wilde",
+    "publication_year": 1890,
+    "genre": "Gothic Fiction",
+    "isbn": "9780141439570"
+  },
+  {
+    "id": 69,
+    "title": "Jane Eyre",
+    "author": "Charlotte Bronte",
+    "publication_year": 1847,
+    "genre": "Romance",
+    "isbn": "9780141441146"
+  },
+  {
+    "id": 70,
+    "title": "Wuthering Heights",
+    "author": "Emily Bronte",
+    "publication_year": 1847,
+    "genre": "Gothic Romance",
+    "isbn": "9780141439556"
+  },
+  {
+    "id": 71,
+    "title": "Great Expectations",
+    "author": "Charles Dickens",
+    "publication_year": 1861,
+    "genre": "Fiction",
+    "isbn": "9780141439563"
+  },
+  {
+    "id": 72,
+    "title": "A Tale of Two Cities",
+    "author": "Charles Dickens",
+    "publication_year": 1859,
+    "genre": "Historical Fiction",
+    "isbn": "9780141439600"
+  },
+  {
+    "id": 73,
+    "title": "Oliver Twist",
+    "author": "Charles Dickens",
+    "publication_year": 1837,
+    "genre": "Fiction",
+    "isbn": "9780141439747"
+  },
+  {
+    "id": 74,
+    "title": "Les Miserables",
+    "author": "Victor Hugo",
+    "publication_year": 1862,
+    "genre": "Historical Fiction",
+    "isbn": "9780140444308"
+  },
+  {
+    "id": 75,
+    "title": "The Hunchback of Notre-Dame",
+    "author": "Victor Hugo",
+    "publication_year": 1831,
+    "genre": "Historical Fiction",
+    "isbn": "9780140443530"
+  },
+  {
+    "id": 76,
+    "title": "The Count of Monte Cristo",
+    "author": "Alexandre Dumas",
+    "publication_year": 1844,
+    "genre": "Adventure",
+    "isbn": "9780140449266"
+  },
+  {
+    "id": 77,
+    "title": "The Three Musketeers",
+    "author": "Alexandre Dumas",
+    "publication_year": 1844,
+    "genre": "Adventure",
+    "isbn": "9780140440410"
+  },
+  {
+    "id": 78,
+    "title": "Twenty Thousand Leagues Under the Sea",
+    "author": "Jules Verne",
+    "publication_year": 1870,
+    "genre": "Sci-Fi",
+    "isbn": "9780140440393"
+  },
+  {
+    "id": 79,
+    "title": "Around the World in Eighty Days",
+    "author": "Jules Verne",
+    "publication_year": 1872,
+    "genre": "Adventure",
+    "isbn": "9780140449433"
+  },
+  {
+    "id": 80,
+    "title": "Journey to the Centre of the Earth",
+    "author": "Jules Verne",
+    "publication_year": 1864,
+    "genre": "Sci-Fi",
+    "isbn": "9780140449068"
+  },
+  {
+    "id": 81,
+    "title": "The Time Machine",
+    "author": "H.G. Wells",
+    "publication_year": 1895,
+    "genre": "Sci-Fi",
+    "isbn": "9780141439976"
+  },
+  {
+    "id": 82,
+    "title": "The War of the Worlds",
+    "author": "H.G. Wells",
+    "publication_year": 1898,
+    "genre": "Sci-Fi",
+    "isbn": "9780141441030"
+  },
+  {
+    "id": 83,
+    "title": "The Invisible Man",
+    "author": "H.G. Wells",
+    "publication_year": 1897,
+    "genre": "Sci-Fi",
+    "isbn": "9780141439983"
+  },
+  {
+    "id": 84,
+    "title": "Sherlock Holmes: A Study in Scarlet",
+    "author": "Arthur Conan Doyle",
+    "publication_year": 1887,
+    "genre": "Mystery",
+    "isbn": "9780140439083"
+  },
+  {
+    "id": 85,
+    "title": "The Hound of the Baskervilles",
+    "author": "Arthur Conan Doyle",
+    "publication_year": 1902,
+    "genre": "Mystery",
+    "isbn": "9780140439076"
+  },
+  {
+    "id": 86,
+    "title": "And Then There Were None",
+    "author": "Agatha Christie",
+    "publication_year": 1939,
+    "genre": "Mystery",
+    "isbn": "9780062073488"
+  },
+  {
+    "id": 87,
+    "title": "Murder on the Orient Express",
+    "author": "Agatha Christie",
+    "publication_year": 1934,
+    "genre": "Mystery",
+    "isbn": "9780062693662"
+  },
+  {
+    "id": 88,
+    "title": "The Girl with the Dragon Tattoo",
+    "author": "Stieg Larsson",
+    "publication_year": 2005,
+    "genre": "Thriller",
+    "isbn": "9780307949486"
+  },
+  {
+    "id": 89,
+    "title": "Gone Girl",
+    "author": "Gillian Flynn",
+    "publication_year": 2012,
+    "genre": "Thriller",
+    "isbn": "9780307588371"
+  },
+  {
+    "id": 90,
+    "title": "The Da Vinci Code",
+    "author": "Dan Brown",
+    "publication_year": 2003,
+    "genre": "Thriller",
+    "isbn": "9780307474278"
+  },
+  {
+    "id": 91,
+    "title": "Angels and Demons",
+    "author": "Dan Brown",
+    "publication_year": 2000,
+    "genre": "Thriller",
+    "isbn": "9780743493468"
+  },
+  {
+    "id": 92,
+    "title": "The Shining",
+    "author": "Stephen King",
+    "publication_year": 1977,
+    "genre": "Horror",
+    "isbn": "9780307743657"
+  },
+  {
+    "id": 93,
+    "title": "It",
+    "author": "Stephen King",
+    "publication_year": 1986,
+    "genre": "Horror",
+    "isbn": "9781501142970"
+  },
+  {
+    "id": 94,
+    "title": "Pet Sematary",
+    "author": "Stephen King",
+    "publication_year": 1983,
+    "genre": "Horror",
+    "isbn": "9781501156700"
+  },
+  {
+    "id": 95,
+    "title": "Carrie",
+    "author": "Stephen King",
+    "publication_year": 1974,
+    "genre": "Horror",
+    "isbn": "9780307743664"
+  },
+  {
+    "id": 96,
+    "title": "The Gunslinger",
+    "author": "Stephen King",
+    "publication_year": 1982,
+    "genre": "Fantasy",
+    "isbn": "9780452284692"
+  },
+  {
+    "id": 97,
+    "title": "A Game of Thrones",
+    "author": "George R.R. Martin",
+    "publication_year": 1996,
+    "genre": "Fantasy",
+    "isbn": "9780553386790"
+  },
+  {
+    "id": 98,
+    "title": "A Clash of Kings",
+    "author": "George R.R. Martin",
+    "publication_year": 1998,
+    "genre": "Fantasy",
+    "isbn": "9780553381696"
+  },
+  {
+    "id": 99,
+    "title": "The Fellowship of the Ring",
+    "author": "J.R.R. Tolkien",
+    "publication_year": 1954,
+    "genre": "Fantasy",
+    "isbn": "9780618346257"
+  },
+  {
+    "id": 100,
+    "title": "The Two Towers",
+    "author": "J.R.R. Tolkien",
+    "publication_year": 1954,
+    "genre": "Fantasy",
+    "isbn": "9780618346264"
+  },
+  {
+    "id": 101,
+    "title": "The Return of the King",
+    "author": "J.R.R. Tolkien",
+    "publication_year": 1955,
+    "genre": "Fantasy",
+    "isbn": "9780618346271"
+  },
+  {
+    "id": 102,
+    "title": "The Silmarillion",
+    "author": "J.R.R. Tolkien",
+    "publication_year": 1977,
+    "genre": "Fantasy",
+    "isbn": "9780618391110"
+  },
+  {
+    "id": 103,
+    "title": "Good Omens",
+    "author": "Terry Pratchett",
+    "publication_year": 1990,
+    "genre": "Fantasy Comedy",
+    "isbn": "9780060853976"
+  },
+  {
+    "id": 104,
+    "title": "American Gods",
+    "author": "Neil Gaiman",
+    "publication_year": 2001,
+    "genre": "Fantasy",
+    "isbn": "9780380789030"
+  },
+  {
+    "id": 105,
+    "title": "Coraline",
+    "author": "Neil Gaiman",
+    "publication_year": 2002,
+    "genre": "Dark Fantasy",
+    "isbn": "9780380807345"
+  },
+  {
+    "id": 106,
+    "title": "Stardust",
+    "author": "Neil Gaiman",
+    "publication_year": 1999,
+    "genre": "Fantasy",
+    "isbn": "9780061689246"
+  },
+  {
+    "id": 107,
+    "title": "The Lies of Locke Lamora",
+    "author": "Scott Lynch",
+    "publication_year": 2006,
+    "genre": "Fantasy",
+    "isbn": "9780553588941"
+  },
+  {
+    "id": 108,
+    "title": "The Way of Kings",
+    "author": "Brandon Sanderson",
+    "publication_year": 2010,
+    "genre": "Fantasy",
+    "isbn": "9780765326355"
+  },
+  {
+    "id": 109,
+    "title": "Mistborn: The Final Empire",
+    "author": "Brandon Sanderson",
+    "publication_year": 2006,
+    "genre": "Fantasy",
+    "isbn": "9780765311788"
+  },
+  {
+    "id": 110,
+    "title": "Elantris",
+    "author": "Brandon Sanderson",
+    "publication_year": 2005,
+    "genre": "Fantasy",
+    "isbn": "9780765350374"
+  },
+  {
+    "id": 111,
+    "title": "The Hunger Games",
+    "author": "Suzanne Collins",
+    "publication_year": 2008,
+    "genre": "Dystopian",
+    "isbn": "9780439023481"
+  },
+  {
+    "id": 112,
+    "title": "Catching Fire",
+    "author": "Suzanne Collins",
+    "publication_year": 2009,
+    "genre": "Dystopian",
+    "isbn": "9780439023498"
+  },
+  {
+    "id": 113,
+    "title": "Mockingjay",
+    "author": "Suzanne Collins",
+    "publication_year": 2010,
+    "genre": "Dystopian",
+    "isbn": "9780439023511"
+  },
+  {
+    "id": 114,
+    "title": "Divergent",
+    "author": "Veronica Roth",
+    "publication_year": 2011,
+    "genre": "Dystopian",
+    "isbn": "9780062024039"
+  },
+  {
+    "id": 115,
+    "title": "The Maze Runner",
+    "author": "James Dashner",
+    "publication_year": 2009,
+    "genre": "Dystopian",
+    "isbn": "9780385737951"
+  },
+  {
+    "id": 116,
+    "title": "Ender's Game",
+    "author": "Orson Scott Card",
+    "publication_year": 1985,
+    "genre": "Sci-Fi",
+    "isbn": "9780812550702"
+  },
+  {
+    "id": 117,
+    "title": "Speaker for the Dead",
+    "author": "Orson Scott Card",
+    "publication_year": 1986,
+    "genre": "Sci-Fi",
+    "isbn": "9780812550757"
+  },
+  {
+    "id": 118,
+    "title": "Foundation",
+    "author": "Isaac Asimov",
+    "publication_year": 1951,
+    "genre": "Sci-Fi",
+    "isbn": "9780553293357"
+  },
+  {
+    "id": 119,
+    "title": "I Robot",
+    "author": "Isaac Asimov",
+    "publication_year": 1950,
+    "genre": "Sci-Fi",
+    "isbn": "9780553294385"
+  },
+  {
+    "id": 120,
+    "title": "The Caves of Steel",
+    "author": "Isaac Asimov",
+    "publication_year": 1954,
+    "genre": "Sci-Fi",
+    "isbn": "9780553293395"
+  },
+  {
+    "id": 121,
+    "title": "Neuromancer",
+    "author": "William Gibson",
+    "publication_year": 1984,
+    "genre": "Cyberpunk",
+    "isbn": "9780441569595"
+  },
+  {
+    "id": 122,
+    "title": "Snow Crash",
+    "author": "Neal Stephenson",
+    "publication_year": 1992,
+    "genre": "Cyberpunk",
+    "isbn": "9780553380958"
+  },
+  {
+    "id": 123,
+    "title": "Do Androids Dream of Electric Sheep",
+    "author": "Philip K. Dick",
+    "publication_year": 1968,
+    "genre": "Sci-Fi",
+    "isbn": "9780345404473"
+  },
+  {
+    "id": 124,
+    "title": "The Man in the High Castle",
+    "author": "Philip K. Dick",
+    "publication_year": 1962,
+    "genre": "Alternate History",
+    "isbn": "9780547572482"
+  },
+  {
+    "id": 125,
+    "title": "Ubik",
+    "author": "Philip K. Dick",
+    "publication_year": 1969,
+    "genre": "Sci-Fi",
+    "isbn": "9780679736646"
+  },
+  {
+    "id": 126,
+    "title": "Ready Player One",
+    "author": "Ernest Cline",
+    "publication_year": 2011,
+    "genre": "Sci-Fi",
+    "isbn": "9780307887436"
+  },
+  {
+    "id": 127,
+    "title": "The Martian",
+    "author": "Andy Weir",
+    "publication_year": 2011,
+    "genre": "Sci-Fi",
+    "isbn": "9780553418026"
+  },
+  {
+    "id": 128,
+    "title": "Project Hail Mary",
+    "author": "Andy Weir",
+    "publication_year": 2021,
+    "genre": "Sci-Fi",
+    "isbn": "9780593135204"
+  },
+  {
+    "id": 129,
+    "title": "Recursion",
+    "author": "Blake Crouch",
+    "publication_year": 2019,
+    "genre": "Sci-Fi Thriller",
+    "isbn": "9781524759780"
+  },
+  {
+    "id": 130,
+    "title": "Dark Matter",
+    "author": "Blake Crouch",
+    "publication_year": 2016,
+    "genre": "Sci-Fi Thriller",
+    "isbn": "9781101904244"
+  },
+  {
+    "id": 131,
+    "title": "The Subtle Art of Not Giving a F*ck",
+    "author": "Mark Manson",
+    "publication_year": 2016,
+    "genre": "Self-Help",
+    "isbn": "9780062457714"
+  },
+  {
+    "id": 132,
+    "title": "Can't Hurt Me",
+    "author": "David Goggins",
+    "publication_year": 2018,
+    "genre": "Self-Help",
+    "isbn": "9781544512273"
+  },
+  {
+    "id": 133,
+    "title": "12 Rules for Life",
+    "author": "Jordan Peterson",
+    "publication_year": 2018,
+    "genre": "Self-Help",
+    "isbn": "9780345816023"
+  },
+  {
+    "id": 134,
+    "title": "The 48 Laws of Power",
+    "author": "Robert Greene",
+    "publication_year": 1998,
+    "genre": "Self-Help",
+    "isbn": "9780140280197"
+  },
+  {
+    "id": 135,
+    "title": "Meditations",
+    "author": "Marcus Aurelius",
+    "publication_year": 1558,
+    "genre": "Philosophy",
+    "isbn": "9780140449334"
+  },
+  {
+    "id": 136,
+    "title": "The Republic",
+    "author": "Plato",
+    "publication_year": 1513,
+    "genre": "Philosophy",
+    "isbn": "9780140455113"
+  },
+  {
+    "id": 137,
+    "title": "Nicomachean Ethics",
+    "author": "Aristotle",
+    "publication_year": 1498,
+    "genre": "Philosophy",
+    "isbn": "9780140449495"
+  },
+  {
+    "id": 138,
+    "title": "Thus Spoke Zarathustra",
+    "author": "Friedrich Nietzsche",
+    "publication_year": 1883,
+    "genre": "Philosophy",
+    "isbn": "9780140441185"
+  },
+  {
+    "id": 139,
+    "title": "Beyond Good and Evil",
+    "author": "Friedrich Nietzsche",
+    "publication_year": 1886,
+    "genre": "Philosophy",
+    "isbn": "9780140449235"
+  },
+  {
+    "id": 140,
+    "title": "Being and Time",
+    "author": "Martin Heidegger",
+    "publication_year": 1927,
+    "genre": "Philosophy",
+    "isbn": "9780061575594"
+  },
+  {
+    "id": 141,
+    "title": "The Social Contract",
+    "author": "Jean-Jacques Rousseau",
+    "publication_year": 1762,
+    "genre": "Philosophy",
+    "isbn": "9780140442014"
+  },
+  {
+    "id": 142,
+    "title": "Critique of Pure Reason",
+    "author": "Immanuel Kant",
+    "publication_year": 1781,
+    "genre": "Philosophy",
+    "isbn": "9780140447484"
+  },
+  {
+    "id": 143,
+    "title": "A Brief History of Time",
+    "author": "Stephen Hawking",
+    "publication_year": 1988,
+    "genre": "Science",
+    "isbn": "9780553380163"
+  },
+  {
+    "id": 144,
+    "title": "The Selfish Gene",
+    "author": "Richard Dawkins",
+    "publication_year": 1976,
+    "genre": "Science",
+    "isbn": "9780198788607"
+  },
+  {
+    "id": 145,
+    "title": "Cosmos",
+    "author": "Carl Sagan",
+    "publication_year": 1980,
+    "genre": "Science",
+    "isbn": "9780345539434"
+  },
+  {
+    "id": 146,
+    "title": "The Origin of Species",
+    "author": "Charles Darwin",
+    "publication_year": 1859,
+    "genre": "Science",
+    "isbn": "9780140432053"
+  },
+  {
+    "id": 147,
+    "title": "Guns Germs and Steel",
+    "author": "Jared Diamond",
+    "publication_year": 1997,
+    "genre": "Non-Fiction",
+    "isbn": "9780393317558"
+  },
+  {
+    "id": 148,
+    "title": "The Art of War",
+    "author": "Sun Tzu",
+    "publication_year": 1910,
+    "genre": "Philosophy",
+    "isbn": "9781599869773"
+  },
+  {
+    "id": 149,
+    "title": "The Prince",
+    "author": "Niccolo Machiavelli",
+    "publication_year": 1532,
+    "genre": "Philosophy",
+    "isbn": "9780140449150"
+  },
+  {
+    "id": 150,
+    "title": "Hamlet",
+    "author": "William Shakespeare",
+    "publication_year": 1603,
+    "genre": "Play",
+    "isbn": "9780743477123"
+  },
+  {
+    "id": 151,
+    "title": "Macbeth",
+    "author": "William Shakespeare",
+    "publication_year": 1606,
+    "genre": "Play",
+    "isbn": "9780743477109"
+  },
+  {
+    "id": 152,
+    "title": "Romeo and Juliet",
+    "author": "William Shakespeare",
+    "publication_year": 1597,
+    "genre": "Play",
+    "isbn": "9780743477116"
+  },
+  {
+    "id": 153,
+    "title": "Othello",
+    "author": "William Shakespeare",
+    "publication_year": 1603,
+    "genre": "Play",
+    "isbn": "9780743477130"
+  },
+  {
+    "id": 154,
+    "title": "King Lear",
+    "author": "William Shakespeare",
+    "publication_year": 1606,
+    "genre": "Play",
+    "isbn": "9780743477147"
+  },
+  {
+    "id": 155,
+    "title": "The Stranger",
+    "author": "Albert Camus",
+    "publication_year": 1942,
+    "genre": "Existentialist Fiction",
+    "isbn": "9780679720201"
+  },
+  {
+    "id": 156,
+    "title": "The Plague",
+    "author": "Albert Camus",
+    "publication_year": 1947,
+    "genre": "Existentialist Fiction",
+    "isbn": "9780679720218"
+  },
+  {
+    "id": 157,
+    "title": "Nausea",
+    "author": "Jean-Paul Sartre",
+    "publication_year": 1938,
+    "genre": "Existentialist Fiction",
+    "isbn": "9780811201568"
+  },
+  {
+    "id": 158,
+    "title": "Siddhartha",
+    "author": "Hermann Hesse",
+    "publication_year": 1922,
+    "genre": "Philosophical Fiction",
+    "isbn": "9780553208849"
+  },
+  {
+    "id": 159,
+    "title": "Steppenwolf",
+    "author": "Hermann Hesse",
+    "publication_year": 1927,
+    "genre": "Philosophical Fiction",
+    "isbn": "9780312278670"
+  },
+  {
+    "id": 160,
+    "title": "The Trial",
+    "author": "Franz Kafka",
+    "publication_year": 1925,
+    "genre": "Absurdist Fiction",
+    "isbn": "9780805209990"
+  },
+  {
+    "id": 161,
+    "title": "The Metamorphosis",
+    "author": "Franz Kafka",
+    "publication_year": 1915,
+    "genre": "Absurdist Fiction",
+    "isbn": "9780553213690"
+  },
+  {
+    "id": 162,
+    "title": "In the Penal Colony",
+    "author": "Franz Kafka",
+    "publication_year": 1919,
+    "genre": "Absurdist Fiction",
+    "isbn": "9780805209983"
+  },
+  {
+    "id": 163,
+    "title": "Lolita",
+    "author": "Vladimir Nabokov",
+    "publication_year": 1955,
+    "genre": "Literary Fiction",
+    "isbn": "9780679723165"
+  },
+  {
+    "id": 164,
+    "title": "Pale Fire",
+    "author": "Vladimir Nabokov",
+    "publication_year": 1962,
+    "genre": "Literary Fiction",
+    "isbn": "9780679723172"
+  },
+  {
+    "id": 165,
+    "title": "Catch-22",
+    "author": "Joseph Heller",
+    "publication_year": 1961,
+    "genre": "War Satire",
+    "isbn": "9781451626650"
+  },
+  {
+    "id": 166,
+    "title": "Portnoy's Complaint",
+    "author": "Philip Roth",
+    "publication_year": 1969,
+    "genre": "Literary Fiction",
+    "isbn": "9780679756453"
+  },
+  {
+    "id": 167,
+    "title": "Beloved",
+    "author": "Toni Morrison",
+    "publication_year": 1987,
+    "genre": "Historical Fiction",
+    "isbn": "9781400033416"
+  },
+  {
+    "id": 168,
+    "title": "Song of Solomon",
+    "author": "Toni Morrison",
+    "publication_year": 1977,
+    "genre": "Literary Fiction",
+    "isbn": "9781400033423"
+  },
+  {
+    "id": 169,
+    "title": "Their Eyes Were Watching God",
+    "author": "Zora Neale Hurston",
+    "publication_year": 1937,
+    "genre": "Literary Fiction",
+    "isbn": "9780061120060"
+  },
+  {
+    "id": 170,
+    "title": "Invisible Man",
+    "author": "Ralph Ellison",
+    "publication_year": 1952,
+    "genre": "Literary Fiction",
+    "isbn": "9780679732761"
+  },
+  {
+    "id": 171,
+    "title": "The Kite Runner",
+    "author": "Khaled Hosseini",
+    "publication_year": 2003,
+    "genre": "Historical Fiction",
+    "isbn": "9781594631931"
+  },
+  {
+    "id": 172,
+    "title": "A Thousand Splendid Suns",
+    "author": "Khaled Hosseini",
+    "publication_year": 2007,
+    "genre": "Historical Fiction",
+    "isbn": "9781594483073"
+  },
+  {
+    "id": 173,
+    "title": "Life of Pi",
+    "author": "Yann Martel",
+    "publication_year": 2001,
+    "genre": "Adventure Fiction",
+    "isbn": "9780156027328"
+  },
+  {
+    "id": 174,
+    "title": "The Shadow of the Wind",
+    "author": "Carlos Ruiz Zafon",
+    "publication_year": 2001,
+    "genre": "Mystery",
+    "isbn": "9780143034902"
+  },
+  {
+    "id": 175,
+    "title": "The House of the Spirits",
+    "author": "Isabel Allende",
+    "publication_year": 1982,
+    "genre": "Magical Realism",
+    "isbn": "9781501117015"
+  },
+  {
+    "id": 176,
+    "title": "Love in the Time of Cholera",
+    "author": "Gabriel Garcia Marquez",
+    "publication_year": 1985,
+    "genre": "Romance",
+    "isbn": "9780307389732"
+  },
+  {
+    "id": 177,
+    "title": "Like Water for Chocolate",
+    "author": "Laura Esquivel",
+    "publication_year": 1989,
+    "genre": "Magical Realism",
+    "isbn": "9780385420174"
+  },
+  {
+    "id": 178,
+    "title": "The Name of the Rose",
+    "author": "Umberto Eco",
+    "publication_year": 1980,
+    "genre": "Mystery",
+    "isbn": "9780151446476"
+  },
+  {
+    "id": 179,
+    "title": "Foucault's Pendulum",
+    "author": "Umberto Eco",
+    "publication_year": 1988,
+    "genre": "Thriller",
+    "isbn": "9780151327652"
+  },
+  {
+    "id": 180,
+    "title": "Midnight's Children",
+    "author": "Salman Rushdie",
+    "publication_year": 1981,
+    "genre": "Magical Realism",
+    "isbn": "9780812976533"
+  },
+  {
+    "id": 181,
+    "title": "The God of Small Things",
+    "author": "Arundhati Roy",
+    "publication_year": 1997,
+    "genre": "Literary Fiction",
+    "isbn": "9780812979657"
+  },
+  {
+    "id": 182,
+    "title": "Train to Pakistan",
+    "author": "Khushwant Singh",
+    "publication_year": 1956,
+    "genre": "Historical Fiction",
+    "isbn": "9780802132215"
+  },
+  {
+    "id": 183,
+    "title": "The White Tiger",
+    "author": "Aravind Adiga",
+    "publication_year": 2008,
+    "genre": "Literary Fiction",
+    "isbn": "9781416562603"
+  },
+  {
+    "id": 184,
+    "title": "Five Point Someone",
+    "author": "Chetan Bhagat",
+    "publication_year": 2004,
+    "genre": "Fiction",
+    "isbn": "9788129104595"
+  },
+  {
+    "id": 185,
+    "title": "The Remains of the Day",
+    "author": "Kazuo Ishiguro",
+    "publication_year": 1989,
+    "genre": "Literary Fiction",
+    "isbn": "9780679731726"
+  },
+  {
+    "id": 186,
+    "title": "Never Let Me Go",
+    "author": "Kazuo Ishiguro",
+    "publication_year": 2005,
+    "genre": "Dystopian",
+    "isbn": "9781400078776"
+  },
+  {
+    "id": 187,
+    "title": "Norwegian Wood",
+    "author": "Haruki Murakami",
+    "publication_year": 1987,
+    "genre": "Literary Fiction",
+    "isbn": "9780375704024"
+  },
+  {
+    "id": 188,
+    "title": "Kafka on the Shore",
+    "author": "Haruki Murakami",
+    "publication_year": 2002,
+    "genre": "Magical Realism",
+    "isbn": "9781400079278"
+  },
+  {
+    "id": 189,
+    "title": "1Q84",
+    "author": "Haruki Murakami",
+    "publication_year": 2009,
+    "genre": "Magical Realism",
+    "isbn": "9780307593313"
+  },
+  {
+    "id": 190,
+    "title": "The Wind-Up Bird Chronicle",
+    "author": "Haruki Murakami",
+    "publication_year": 1994,
+    "genre": "Magical Realism",
+    "isbn": "9780679775430"
+  },
+  {
+    "id": 191,
+    "title": "Educated",
+    "author": "Tara Westover",
+    "publication_year": 2018,
+    "genre": "Memoir",
+    "isbn": "9780399590504"
+  },
+  {
+    "id": 192,
+    "title": "The Glass Castle",
+    "author": "Jeannette Walls",
+    "publication_year": 2005,
+    "genre": "Memoir",
+    "isbn": "9780743247542"
+  },
+  {
+    "id": 193,
+    "title": "Born a Crime",
+    "author": "Trevor Noah",
+    "publication_year": 2016,
+    "genre": "Memoir",
+    "isbn": "9780399588174"
+  },
+  {
+    "id": 194,
+    "title": "Becoming",
+    "author": "Michelle Obama",
+    "publication_year": 2018,
+    "genre": "Memoir",
+    "isbn": "9781524763138"
+  },
+  {
+    "id": 195,
+    "title": "The Diary of a Young Girl",
+    "author": "Anne Frank",
+    "publication_year": 1947,
+    "genre": "Memoir",
+    "isbn": "9780553296983"
+  },
+  {
+    "id": 196,
+    "title": "Man's Search for Meaning",
+    "author": "Viktor Frankl",
+    "publication_year": 1946,
+    "genre": "Psychology",
+    "isbn": "9780807014271"
+  },
+  {
+    "id": 197,
+    "title": "The Power of Now",
+    "author": "Eckhart Tolle",
+    "publication_year": 1997,
+    "genre": "Self-Help",
+    "isbn": "9781577314806"
+  },
+  {
+    "id": 198,
+    "title": "Thinking in Systems",
+    "author": "Donella Meadows",
+    "publication_year": 2008,
+    "genre": "Science",
+    "isbn": "9781603580557"
+  },
+  {
+    "id": 199,
+    "title": "The Design of Everyday Things",
+    "author": "Don Norman",
+    "publication_year": 1988,
+    "genre": "Non-Fiction",
+    "isbn": "9780465050659"
+  },
+  {
+    "id": 200,
+    "title": "Clean Code",
+    "author": "Robert C. Martin",
+    "publication_year": 2008,
+    "genre": "Technology",
+    "isbn": "9780132350884"
+  },
+  {
+    "id": 201,
+    "title": "The Pragmatic Programmer",
+    "author": "Andrew Hunt",
+    "publication_year": 1999,
+    "genre": "Technology",
+    "isbn": "9780135957059"
+  },
+  {
+    "id": 202,
+    "title": "Design Patterns",
+    "author": "Gang of Four",
+    "publication_year": 1994,
+    "genre": "Technology",
+    "isbn": "9780201633610"
+  },
+  {
+    "id": 203,
+    "title": "Introduction to Algorithms",
+    "author": "Thomas H. Cormen",
+    "publication_year": 1990,
+    "genre": "Technology",
+    "isbn": "9780262033848"
+  },
+  {
+    "id": 204,
+    "title": "The Midnight Library",
+    "author": "Matt Haig",
+    "publication_year": 2020,
+    "genre": "Fiction",
+    "isbn": "9780525559474"
+  },
+  {
+    "id": 205,
+    "title": "Where the Crawdads Sing",
+    "author": "Delia Owens",
+    "publication_year": 2018,
+    "genre": "Mystery",
+    "isbn": "9780735224292"
+  },
+  {
+    "id": 206,
+    "title": "The Seven Husbands of Evelyn Hugo",
+    "author": "Taylor Jenkins Reid",
+    "publication_year": 2017,
+    "genre": "Romance",
+    "isbn": "9781501161933"
+  },
+  {
+    "id": 207,
+    "title": "It Ends with Us",
+    "author": "Colleen Hoover",
+    "publication_year": 2016,
+    "genre": "Romance",
+    "isbn": "9781501110368"
+  },
+  {
+    "id": 208,
+    "title": "Verity",
+    "author": "Colleen Hoover",
+    "publication_year": 2018,
+    "genre": "Thriller",
+    "isbn": "9781538724736"
+  },
+  {
+    "id": 209,
+    "title": "Fourth Wing",
+    "author": "Rebecca Yarros",
+    "publication_year": 2023,
+    "genre": "Fantasy Romance",
+    "isbn": "9781649374042"
+  },
+  {
+    "id": 210,
+    "title": "Tomorrow and Tomorrow and Tomorrow",
+    "author": "Gabrielle Zevin",
+    "publication_year": 2022,
+    "genre": "Literary Fiction",
+    "isbn": "9780593321201"
+  },
+  {
+    "id": 211,
+    "title": "Piranesi",
+    "author": "Susanna Clarke",
+    "publication_year": 2020,
+    "genre": "Fantasy",
+    "isbn": "9781635575637"
+  },
+  {
+    "id": 212,
+    "title": "The Invisible Life of Addie LaRue",
+    "author": "V.E. Schwab",
+    "publication_year": 2020,
+    "genre": "Fantasy",
+    "isbn": "9780765387561"
+  },
+  {
+    "id": 213,
+    "title": "Six of Crows",
+    "author": "Leigh Bardugo",
+    "publication_year": 2015,
+    "genre": "Fantasy",
+    "isbn": "9781627792127"
+  },
+  {
+    "id": 214,
+    "title": "The Night Circus",
+    "author": "Erin Morgenstern",
+    "publication_year": 2011,
+    "genre": "Fantasy",
+    "isbn": "9780385534635"
+  },
+  {
+    "id": 215,
+    "title": "Circe",
+    "author": "Madeline Miller",
+    "publication_year": 2018,
+    "genre": "Mythological Fiction",
+    "isbn": "9780316556347"
+  },
+  {
+    "id": 216,
+    "title": "The Song of Achilles",
+    "author": "Madeline Miller",
+    "publication_year": 2011,
+    "genre": "Mythological Fiction",
+    "isbn": "9780062060617"
+  },
+  {
+    "id": 217,
+    "title": "The Secret History",
+    "author": "Donna Tartt",
+    "publication_year": 1992,
+    "genre": "Mystery",
+    "isbn": "9781400031702"
+  },
+  {
+    "id": 218,
+    "title": "The Goldfinch",
+    "author": "Donna Tartt",
+    "publication_year": 2013,
+    "genre": "Literary Fiction",
+    "isbn": "9780316055437"
+  },
+  {
+    "id": 219,
+    "title": "All the Light We Cannot See",
+    "author": "Anthony Doerr",
+    "publication_year": 2014,
+    "genre": "Historical Fiction",
+    "isbn": "9781476746586"
+  },
+  {
+    "id": 220,
+    "title": "The Book Thief",
+    "author": "Markus Zusak",
+    "publication_year": 2005,
+    "genre": "Historical Fiction",
+    "isbn": "9780375842207"
+  }
+]
