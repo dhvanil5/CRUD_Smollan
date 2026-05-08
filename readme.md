@@ -32,6 +32,8 @@ The frontend updates in real time using WebSockets whenever the dataset changes.
 ├── books.json       # Auto-created on first run
 └── static/
     └── index.html   # Frontend (HTML + CSS + JS)Requirements
+
+
 Python 3.11+
 FastAPI
 Uvicorn
